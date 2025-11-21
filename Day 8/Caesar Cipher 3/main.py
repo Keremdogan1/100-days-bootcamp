@@ -1,32 +1,55 @@
-# TODO-1: Import and print the logo from art.py when the program starts.
+from art import logo
 
+letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+new_letters = [""] * 26
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+def letters_shift(letters, shift):
+    shift %= 26
+    for i in range(26-shift):
+        new_letters[i]=letters[i+shift]
+    for i in range(shift):
+        new_letters[i-25] = letters[i]
 
-# TODO-2: What happens if the user enters a number/symbol/space?
+def crypt(code, letters, shift, select):
+    letters_shift(letters, shift)
 
+    code_list = [char for char in code]
+    code_list_len = len(code_list)
 
-def caesar(original_text, shift_amount, encode_or_decode):
-    output_text = ""
+    for index in range(code_list_len):
+        if code_list[index] in letters:
+            for i in range(26):
+                if code_list[index] == letters[i]:
+                    code_list[index] = new_letters[i]
+                    break
 
-    for letter in original_text:
-        if encode_or_decode == "decode":
-            shift_amount *= -1
+    code_list_string = "".join(code_list)
+    if select == 1:
+        print(f"Here's the encoded result: {code_list_string}")
+    else:
+        print(f"Here's the decoded result: {code_list_string}")
 
-        shifted_position = alphabet.index(letter) + shift_amount
-        shifted_position %= len(alphabet)
-        output_text += alphabet[shifted_position]
-    print(f"Here is the {encode_or_decode}d result: {output_text}")
+run = True
 
+while run:
+    print(logo)
 
-# TODO-3: Can you figure out a way to restart the cipher program?
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+    code = input("Enter the code which you want to encrypt: ")
+    code = code.lower()
+    shift = int(input("Enter the shift amount: "))
 
+    if direction == "encode":
+        crypt(code, letters, shift, 1)
+    elif direction == "decode":
+        crypt(code, letters, (26-shift), 2)
+    else:
+        print("Wrong input!")
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
+    wanna_continue = input("Type 'yes' if you want to do again. Otherwise type 'no':\n").lower()
 
-caesar(original_text=text, shift_amount=shift, encode_or_decode=direction)
-
-
-
+    if wanna_continue == "yes":
+        run = True
+    else:
+        print("Goodbye!")
+        run = False

@@ -1,26 +1,50 @@
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+new_letters = [""] * 26
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
+def letters_shift(letters, shift):
+    shift %= 26
+    for i in range(26-shift):
+        new_letters[i]=letters[i+shift]
+    for i in range(shift):
+        new_letters[i-25] = letters[i]
 
+def crypt(code, letters, shift, select):
+    letters_shift(letters, shift)
 
-# TODO-1: Create a function called 'decrypt()' that takes 'original_text' and 'shift_amount' as inputs.
-# TODO-2: Inside the 'decrypt()' function, shift each letter of the 'original_text' *backwards* in the alphabet
-#  by the shift amount and print the decrypted text.
-# TODO-3: Combine the 'encrypt()' and 'decrypt()' functions into one function called 'caesar()'.
-#  Use the value of the user chosen 'direction' variable to determine which functionality to use.
+    code_list = [char for char in code]
+    code_list_len = len(code_list)
 
-def encrypt(original_text, shift_amount):
-    cipher_text = ""
-    for letter in original_text:
-        shifted_position = alphabet.index(letter) + shift_amount
-        shifted_position %= len(alphabet)
-        cipher_text += alphabet[shifted_position]
-    print(f"Here is the encoded result: {cipher_text}")
+    for index in range(code_list_len):
+        if code_list[index] in letters:
+            for i in range(26):
+                if code_list[index] == letters[i]:
+                    code_list[index] = new_letters[i]
+                    break
 
+    code_list_string = "".join(code_list)
+    if select == 1:
+        print(f"Here's the encoded result: {code_list_string}")
+    else:
+        print(f"Here's the decoded result: {code_list_string}")
 
-encrypt(original_text=text, shift_amount=shift)
+run = True
 
+while run:
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+    code = input("Enter the code which you want to encrypt: ")
+    code = code.lower()
+    shift = int(input("Enter the shift amount: "))
 
+    if direction == "encode":
+        crypt(code, letters, shift, 1)
+    elif direction == "decode":
+        crypt(code, letters, (26-shift), 2)
+    else:
+        print("Wrong input!")
 
+    wanna_continue = input("Type 'yes' if you want to do again. Otherwise type 'no':\n").lower()
+
+    if wanna_continue == "yes":
+        run = True
+    else:
+        run = False
