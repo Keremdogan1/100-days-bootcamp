@@ -1,3 +1,6 @@
+#Note: I took some code from solutions because i finished my sheety quote and amadeus API wasn't responsing propery. 
+#But i understand the logic of code (mostly)
+
 import time
 from datetime import datetime, timedelta
 from data_manager import DataManager
