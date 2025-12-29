@@ -34,24 +34,18 @@ tracking my progress from Python fundamentals to more advanced, real-world use c
 
 ---
 
-## 📅 Daily Progress
-
 <!-- DAILY_PROGRESS_START -->
 ## 📅 Daily Progress
 
-### Day 46
-
+### Day 46 – Spotify Musical Time Machine
 - 📄 [Open Summary](./Day 46/summary.md)
 - 📂 [Open Folder](./Day 46)
 
 ---
-
 <details>
 <summary><strong>📚 Previous Days</strong></summary>
 
-<br>
-
-### Day 45
+### Day 45 – Web Scraping with BeautifulSoup
 - 📄 [Open Summary](./Day 45/summary.md)
 - 📂 [Open Folder](./Day 45)
 

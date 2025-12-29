@@ -5,6 +5,23 @@ ROOT = Path(__file__).resolve().parent
 README = ROOT / "README.md"
 
 DAY_PATTERN = re.compile(r"Day (\d+)")
+TITLE_PATTERN = re.compile(r"^(#{1,3})\s+(.*)", re.MULTILINE)
+
+
+def extract_title(summary_path, day_number):
+    """
+    summary.md içinden ilk markdown başlığını alır.
+    Yoksa 'Day X' döner.
+    """
+    try:
+        content = summary_path.read_text(encoding="utf-8")
+        match = TITLE_PATTERN.search(content)
+        if match:
+            return match.group(2).strip()
+    except Exception:
+        pass
+
+    return f"Day {day_number}"
 
 
 def get_days():
@@ -14,42 +31,42 @@ def get_days():
         if d.is_dir():
             match = DAY_PATTERN.fullmatch(d.name)
             if match:
+                day_number = int(match.group(1))
                 summary = d / "summary.md"
                 if summary.exists():
-                    days.append((int(match.group(1)), d))
+                    title = extract_title(summary, day_number)
+                    days.append((day_number, d, title))
 
     if not days:
         raise RuntimeError("No Day folders with summary.md found")
 
-    # küçükten büyüğe → sonra ters çevireceğiz
     return sorted(days)
 
 
 def build_daily_progress(days):
-    # büyükten küçüğe (en güncel üstte)
+    # En güncelden eskiye
     days_desc = list(reversed(days))
 
     lines = []
     lines.append("## 📅 Daily Progress\n")
 
-    # 🔹 En güncel gün
-    latest_day, latest_dir = days_desc[0]
-    lines.append(f"### Day {latest_day}\n")
+    # 🔹 Latest day
+    latest_day, latest_dir, latest_title = days_desc[0]
+    lines.append(f"### {latest_title}")
     lines.append(f"- 📄 [Open Summary](./{latest_dir.name}/summary.md)")
     lines.append(f"- 📂 [Open Folder](./{latest_dir.name})\n")
 
-    # 🔹 Eğer sadece 1 gün varsa → üçgen yok
+    # 🔹 Tek gün varsa
     if len(days_desc) == 1:
         return "\n".join(lines), latest_day
 
-    # 🔹 Önceki günler → kapalı üçgen
-    lines.append("---\n")
+    # 🔹 Önceki günler
+    lines.append("---")
     lines.append("<details>")
     lines.append("<summary><strong>📚 Previous Days</strong></summary>\n")
-    lines.append("<br>\n")
 
-    for day, d in days_desc[1:]:
-        lines.append(f"### Day {day}")
+    for day, d, title in days_desc[1:]:
+        lines.append(f"### {title}")
         lines.append(f"- 📄 [Open Summary](./{d.name}/summary.md)")
         lines.append(f"- 📂 [Open Folder](./{d.name})\n")
 
