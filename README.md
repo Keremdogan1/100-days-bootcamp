@@ -45,9 +45,8 @@ tracking my progress from Python fundamentals to more advanced, real-world use c
 <summary><strong>📚 Previous Days</strong></summary>
 
 ### Day 45 – Web Scraping with BeautifulSoup
-- 📄 [Open Summary](./Day 45/summary.md)
-- 📂 [Open Folder](./Day 45)
-
+- 📄 [Open Summary](./Day%2046/summary.md)
+- 📂 [Open Folder](./Day%2046)
 </details>
 
 <!-- DAILY_PROGRESS_END -->

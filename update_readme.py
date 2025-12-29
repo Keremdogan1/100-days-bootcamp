@@ -69,8 +69,9 @@ def build_daily_progress(days):
 
     for day, d, title in days_desc[1:]:
         lines.append(f"### {title}")
-        lines.append(f"- 📄 [Open Summary](./{d.name}/summary.md)")
-        lines.append(f"- 📂 [Open Folder](./{d.name})\n")
+        encoded = quote(latest_dir.name)
+        lines.append(f"- 📄 [Open Summary](./{encoded}/summary.md)")
+        lines.append(f"- 📂 [Open Folder](./{encoded})")
 
     lines.append("</details>\n")
 
