@@ -27,12 +27,13 @@ tracking my progress from Python fundamentals to more advanced, real-world use c
 ## 📖 Table of Contents
 
 - 📅 [Daily Progress](#daily-progress)
-- 🚀 [Current Progress](#current-progress)
 - ⭐ [Highlights So Far](#highlights-so-far)
 - 💡 [Why This Repo Exists](#why-this-repo-exists)
 - 🛣️ [Next Steps](#next-steps)
 
 ---
+
+<a id="daily-progress"></a>
 
 <!-- DAILY_PROGRESS_START -->
 ## 📅 Daily Progress
@@ -76,6 +77,8 @@ tracking my progress from Python fundamentals to more advanced, real-world use c
 
 ---
 
+<a id="highlights-so-far"></a>
+
 ## ⭐ Highlights So Far
 
 - Built automation and scraping scripts
@@ -84,6 +87,8 @@ tracking my progress from Python fundamentals to more advanced, real-world use c
 - Developed strong daily coding discipline
 
 ---
+
+<a id="why-this-repo-exists"></a>
 
 ## 💡 Why This Repo Exists
 
@@ -95,6 +100,8 @@ This repository exists to:
 - Track improvement, not just completion
 
 ---
+
+<a id="next-steps"></a>
 
 ## 🛣️ Next Steps
 
