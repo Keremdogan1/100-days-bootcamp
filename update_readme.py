@@ -1,4 +1,5 @@
 from pathlib import Path
+from urllib.parse import quote
 import re
 
 ROOT = Path(__file__).resolve().parent
@@ -53,8 +54,9 @@ def build_daily_progress(days):
     # 🔹 Latest day
     latest_day, latest_dir, latest_title = days_desc[0]
     lines.append(f"### {latest_title}")
-    lines.append(f"- 📄 [Open Summary](./{latest_dir.name}/summary.md)")
-    lines.append(f"- 📂 [Open Folder](./{latest_dir.name})\n")
+    encoded = quote(latest_dir.name)
+    lines.append(f"- 📄 [Open Summary](./{encoded}/summary.md)")
+    lines.append(f"- 📂 [Open Folder](./{encoded})")
 
     # 🔹 Tek gün varsa
     if len(days_desc) == 1:

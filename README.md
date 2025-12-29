@@ -38,9 +38,8 @@ tracking my progress from Python fundamentals to more advanced, real-world use c
 ## 📅 Daily Progress
 
 ### Day 46 – Spotify Musical Time Machine
-- 📄 [Open Summary](./Day 46/summary.md)
-- 📂 [Open Folder](./Day 46)
-
+- 📄 [Open Summary](./Day%2046/summary.md)
+- 📂 [Open Folder](./Day%2046)
 ---
 <details>
 <summary><strong>📚 Previous Days</strong></summary>
