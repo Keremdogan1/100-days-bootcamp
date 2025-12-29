@@ -11,17 +11,16 @@ def get_latest_day():
     days = []
 
     for folder in os.listdir("."):
-        if folder.startswith("Day-"):
-            try:
-                day_num = int(folder.split("-")[1])
-                summary_path = os.path.join(folder, "summary.md")
-                if os.path.exists(summary_path):
-                    days.append((day_num, summary_path))
-            except ValueError:
-                pass
+        match = re.match(r"[Dd]ay[\s\-_]?(\d+)", folder)
+        if match:
+            day_num = int(match.group(1))
+            summary_path = os.path.join(folder, "summary.md")
+
+            if os.path.exists(summary_path):
+                days.append((day_num, summary_path))
 
     if not days:
-        raise RuntimeError("No Day-X folders with summary.md found")
+        raise RuntimeError("No Day folders with summary.md found")
 
     return max(days, key=lambda x: x[0])
 
