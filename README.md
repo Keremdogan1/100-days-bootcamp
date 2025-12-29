@@ -16,52 +16,11 @@ This repository documents my full journey through
 It serves as both a **structured learning archive** and a **public portfolio**,  
 tracking my progress from Python fundamentals to more advanced, real-world use cases.
 
----
-
-## 📌 What’s Inside
-
-- 📁 **Daily project folders** (one folder per day)
-- 📝 Hands-on exercises and mini-projects
-- 🔧 Continuous refactoring and improvement
-- 📈 Clear progression from beginner → intermediate Python
-
----
-
 ## 🛠️ Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3.14-yellow)
 ![IDE](https://img.shields.io/badge/IDE-VSCode-blue)
 ![Tools](https://img.shields.io/badge/Tools-ChatGPT%20%7C%20Claude-lightgrey)
-
----
-
-## 🎯 Focus Areas
-
-- Python Fundamentals & Best Practices
-- Automation & Scripting
-- APIs & Web Requests
-- Web Scraping
-- Data Handling & File Processing
-
----
-
-## 🧭 Goal
-
-Build **strong, practical Python fluency** through  
-**100 structured, hands-on projects**, focusing on problem solving and real-world scenarios.
-
----
-
-## 📅 Current Progress
-
-**Day 46 / 100**
-
-Current focus:
-
-- Advanced web scraping workflows
-- Working with real-world data sources
-- Combining scraping with APIs and automation
-- Writing reusable and maintainable scripts
 
 ---
 
@@ -75,17 +34,53 @@ Current focus:
 
 ---
 
+## 📅 Daily Progress
+
 <!-- DAILY_PROGRESS_START -->
+## 📅 Daily Progress
 
-### Day 46 – Spotify Musical Time Machine
+### Day 46
 
-- Scraped Vikipedia Top 100 Songs by Years data
-- Integrated Youtube Music API
-- Auto-generated playlists
+- 📄 [Open Summary](./Day 46/summary.md)
+- 📂 [Open Folder](./Day 46)
 
 ---
 
+<details>
+<summary><strong>📚 Previous Days</strong></summary>
+
+<br>
+
+### Day 45
+- 📄 [Open Summary](./Day 45/summary.md)
+- 📂 [Open Folder](./Day 45)
+
+</details>
+
 <!-- DAILY_PROGRESS_END -->
+
+---
+
+## 🏆 Upcoming Goals
+
+- 🔸 **Next Milestone**  
+  **Day 59 — Working on Advanced Python Projects**
+
+- 🔸 **Big Milestone**  
+  **Day 82 — Portfolio-ready Project**
+
+- 🔹 **FINAL GOAL**  
+  **Complete all 100 days with full summaries and code history**
+
+---
+
+## 🎯 Focus Areas
+
+- Python Fundamentals & Best Practices
+- Automation & Scripting
+- APIs & Web Requests
+- Web Scraping
+- Data Handling & File Processing
 
 ---
 
@@ -118,6 +113,7 @@ After completing the bootcamp:
 - Blockchain fundamentals
 - Web development
 - Larger, end-to-end multi-language projects
+- Expand README as I progress
 
 ---
 
