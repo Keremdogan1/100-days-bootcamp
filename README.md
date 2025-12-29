@@ -29,7 +29,7 @@ tracking my progress from Python fundamentals to more advanced, real-world use c
 
 ## 🛠️ Tech Stack
 
-![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Python](https://img.shields.io/badge/Python-3.14-yellow)
 ![IDE](https://img.shields.io/badge/IDE-VSCode-blue)
 ![Tools](https://img.shields.io/badge/Tools-ChatGPT%20%7C%20Claude-lightgrey)
 
@@ -76,6 +76,7 @@ Current focus:
 ---
 
 <!-- DAILY_PROGRESS_START -->
+
 ### Day 46 – Spotify Musical Time Machine
 
 - Scraped Vikipedia Top 100 Songs by Years data
@@ -83,6 +84,7 @@ Current focus:
 - Auto-generated playlists
 
 ---
+
 <!-- DAILY_PROGRESS_END -->
 
 ---
