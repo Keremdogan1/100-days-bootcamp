@@ -63,10 +63,7 @@ def build_daily_progress(days):
     if len(days_desc) == 1:
         return "\n".join(lines), latest_day
 
-    # 🔹 Separator (SADECE burada)
-    lines.append("---")
-
-    # 🔹 Previous days
+    # 🔹 Previous days (ARTIK --- YOK)
     lines.append("<details>")
     lines.append("<summary><strong>📚 Previous Days</strong></summary>\n")
 
@@ -79,6 +76,7 @@ def build_daily_progress(days):
     lines.append("</details>")
 
     return "\n".join(lines), latest_day
+
 
 
 def update_progress_badge(readme_text, latest_day):

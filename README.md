@@ -41,7 +41,6 @@ tracking my progress from Python fundamentals to more advanced, real-world use c
 ### Day 47 – Automated Amazon Price Tracker
 - 📄 [Open Summary](./Day%2047/summary.md)
 - 📂 [Open Folder](./Day%2047)
----
 <details>
 <summary><strong>📚 Previous Days</strong></summary>
 
