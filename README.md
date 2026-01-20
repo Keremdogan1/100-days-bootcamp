@@ -6,7 +6,7 @@
 ![Commit Activity](https://img.shields.io/github/commit-activity/m/Keremdogan1/100-days-bootcamp)
 ![Last Commit](https://img.shields.io/github/last-commit/Keremdogan1/100-days-bootcamp)
 
-![Progress](https://img.shields.io/badge/Progress-54%2F100-brightgreen?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-55%2F100-brightgreen?style=for-the-badge)
 
 ---
 
@@ -38,13 +38,16 @@ tracking my progress from Python fundamentals to more advanced, real-world use c
 <!-- DAILY_PROGRESS_START -->
 ## 📅 Daily Progress
 
-### Day 54 – Creating a Web Server with Flask & Python Decorators
-- 📄 [Open Summary](./Day%2054/summary.md)
-- 📂 [Open Folder](./Day%2054)
+### Day 55 – HTML & URL Parsing in Flask (Higher Lower Game)
+- 📄 [Open Summary](./Day%2055/summary.md)
+- 📂 [Open Folder](./Day%2055)
 ---
 <details>
 <summary><strong>📚 Previous Days</strong></summary>
 
+### Day 54 – Creating a Web Server with Flask & Python Decorators
+- 📄 [Open Summary](./Day%2054/summary.md)
+- 📂 [Open Folder](./Day%2054)
 ### Day 53 – Data Entry Job Automation with Selenium & BeautifulSoup
 - 📄 [Open Summary](./Day%2053/summary.md)
 - 📂 [Open Folder](./Day%2053)
